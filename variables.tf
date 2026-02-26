@@ -1,30 +1,60 @@
 variable "location" {
-  default = "East US"
+
 }
 
 variable "rg_name" {
-  default = "rg-demo-vm"
+  
 }
 
 variable "vnet_name" {
-  default = " "
+  
 }
 variable "subnet_name" {
-  default = "subnet-demo"
+  
 }
 
-variable "vm_name" {
-  default = "vm-demo"
+# variable "vm_name" {
+  
+# }
+
+# variable "admin_username" {
+  
+# }
+
+# variable "admin_password" {
+  
+# }
+
+# variable "bastion_name" {}
+
+# variable "bastion_subnet_cidr" {}
+
+#----------aks----------
+
+variable "aks_cluster_name" {
+  type = string
 }
 
-variable "admin_username" {
-  default = "azureuser"
+variable "dns_prefix" {
+  type = string
 }
 
-variable "admin_password" {
-  sensitive = true
+variable "node_count" {
+  type = number
 }
 
-variable "bastion_name" {}
+variable "vm_size" {
+  type = string
+}
 
-variable "bastion_subnet_cidr" {}
+variable "kubernetes_version" {
+  type = string
+}
+
+variable "enable_private_cluster" {
+  type = bool
+}
+
+variable "tags" {
+  type = map(string)
+}
